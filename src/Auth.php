@@ -1,5 +1,7 @@
 <?php
 
+use Phalcon\Security as Security;
+
 class Auth {
 
 	protected $username;
@@ -11,7 +13,7 @@ class Auth {
 
 		$user = Users::findFirstByUsername($username);
 
-		if( $this->checkUsername($username, $user) ){
+		if( $this->checkUsername($user) ){
 
 			if( $this->checkPassword($password, $user) ){
 				return true;
@@ -20,8 +22,6 @@ class Auth {
 		}else{
 			return false;
 		}
-
-		return false; // always returns false just in case anything goes haywire.
 
 	}
 
@@ -37,9 +37,10 @@ class Auth {
 
 	private function checkPassword($password, $user)
 	{
+		$security = new Security;
 
 		// Check that password supplied matches the password in the database for that user
-        $varified = $this->security->checkHash($password, $user->password);
+        $varified = $security->checkHash($password, $user->password);
 
         if($varified){
         	return true;
