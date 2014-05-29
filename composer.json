@@ -1,0 +1,5 @@
+{
+    "require": {
+        "jeremykendall/password-validator": "~2.0.3"
+    }
+}

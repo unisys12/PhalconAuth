@@ -1,5 +1,7 @@
 <?php
 
+use JeremyKendall\Password\PasswordValidator as Validator;
+
 class Auth {
 
 	protected $username;
@@ -21,7 +23,7 @@ class Auth {
 			return false;
 		}
 
-		return false; // always returns false just in case anything goes haywire.
+		//return false; // always returns false just in case anything goes haywire.
 
 	}
 
@@ -38,8 +40,10 @@ class Auth {
 	private function checkPassword($password, $user)
 	{
 
+        $validator = new Validator;
+
 		// Check that password supplied matches the password in the database for that user
-        $varified = $this->security->checkHash($password, $user->password);
+        $varified = $validator->isValid($password, $user->password);
 
         if($varified){
         	return true;
