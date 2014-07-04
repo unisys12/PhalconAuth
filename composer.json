@@ -2,7 +2,7 @@
 	"name": "phillipjackon/phalconauth",
 	"description": "Simple user authentication package for use with PhalconPHP",
 	"license": "MIT",
-	"keyworkds": [
+	"keywords": [
 		"authentication",
 		"auth",
 		"PhalconPHP"
@@ -17,7 +17,7 @@
 	"require-dev": {},
 	"autoload": {
 		"psr-4": {
-			"PhillipJackson\\PhalconAuth": "src"
+			"PhillipJackson\\PhalconAuth\\": "src/"
 		}
 	}
 }
