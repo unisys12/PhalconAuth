@@ -1,0 +1,7 @@
+/.vagrant
+/scripts
+/vendor
+aliases
+composer.json
+Homestead.yaml
+Vagrantfile
