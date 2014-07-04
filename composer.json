@@ -1,0 +1,23 @@
+{
+	"name": "phillipjackon/phalconauth",
+	"description": "Simple user authentication package for use with PhalconPHP",
+	"license": "MIT",
+	"keyworkds": [
+		"authentication",
+		"auth",
+		"PhalconPHP"
+	],
+	"authors": [
+		{
+			"name": "Phillip Jackson",
+			"email": "unisys12@gmail.com"
+		}
+	],
+	"require": {},
+	"require-dev": {},
+	"autoload": {
+		"psr-4": {
+			"PhillipJackson\\PhalconAuth": "src"
+		}
+	}
+}

@@ -1,0 +1,21 @@
+---
+ip: "192.168.10.10"
+memory: 512
+cpus: 1
+
+authorize: /Users/Phillip/.ssh/id_rsa.pub
+
+keys:
+    - /Users/Phillip/.ssh/id_rsa
+
+folders:
+    - map: /phalconauth/
+      to: /home/vagrant/phalconauth/
+
+sites:
+    - map: phalconauth.app
+      to: /home/vagrant/phalconauth/public
+
+variables:
+    - key: APP_ENV
+      value: local
