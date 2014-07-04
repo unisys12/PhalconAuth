@@ -3,5 +3,6 @@
 /vendor
 aliases
 composer.json
+composer.lock
 Homestead.yaml
 Vagrant
